@@ -94,7 +94,7 @@ function updateRacerPositions() {
 
         // Retains your existing 30px adjustment
         progressBar.style.width =
-            `${Math.max(105, position + avatar.offsetWidth - 30)}px`;
+            `${Math.max(115, position + avatar.offsetWidth - 30)}px`;
     });
 }
 
