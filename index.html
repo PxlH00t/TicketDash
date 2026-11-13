@@ -13,9 +13,12 @@
 </head>
 <body>
     <h1><i>TICKET DASH</i></h1>
-    <h2 id="race-results">Calculating results...</h2>
+    <div id="message-board">
+        <h2 id="race-winner"></h2>
+        <h2><span id="race-results"></span></h2>
+        <h2 id="race-message"></h2>
+    </div>
     <div id="race-container"></div>
-
     <template id="race-template">
         <div class="race-lane">
             <div class="race-track">
@@ -26,7 +29,7 @@
                     </div>
                 </div>
                 <div class="ticket-container">
-                    <i><span class="tickets"></span></i>
+                    <span class="tickets"></span>
                 </div>
             </div>
         </div>

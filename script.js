@@ -163,7 +163,7 @@ function setupRace() {
     raceProgress = 0;
     updateRacerPositions();
 
-    document.getElementById("race-results").textContent =
+    document.getElementById("race-message").textContent =
         "Calculating results...";
 }
 
@@ -256,10 +256,12 @@ function updateTrackResults(leaders) {
 
 // Display race results
 function showResults() {
+    const winner = document.getElementById("race-winner");
     const results = document.getElementById("race-results");
+    const racemessage = document.getElementById("race-message");
 
     if (racers.length === 0) {
-        results.textContent = "No racers available.";
+        racemessage.textContent = "No racers available.";
         return;
     }
 
@@ -277,22 +279,23 @@ function showResults() {
     updateTrackResults(tiedLeaders);
 
     if (tiedLeaders.length > 1) {
-        results.textContent = tiedLeaders.length === racers.length
+        racemessage.textContent = tiedLeaders.length === racers.length
             ? "It's a tie!"
             : `${tiedLeaders.map(r => r.name).join(" & ")} are tied for the lead!`;
         return;
     }
 
     if (racers.length === 1) {
-        results.textContent = `${leader.name} is racing solo!`;
+        resracemessageults.textContent = `${leader.name} is racing solo!`;
         return;
     }
 
     const runnerUp = sortedRacers[1];
     const difference = leader.tickets - runnerUp.tickets;
-
+    winner.textContent = `${leader.name} leads by`;
     results.textContent =
-        `${leader.name} leads by ${difference.toLocaleString()} tickets!`;
+        `${difference.toLocaleString()}`;
+    racemessage.textContent = `tickets!`;
 }
 
 // Start or replay the race
