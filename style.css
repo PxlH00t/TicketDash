@@ -1,5 +1,25 @@
 body {
-    background-color: #3b2f6b;
+    padding: 20px;
+    background:
+        radial-gradient(
+            ellipse at 0% 100%,
+            #7773C6 0%,
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at 100% 150%,
+            #E87889 0%,
+            transparent 50%
+        ),
+        linear-gradient(
+            to bottom,
+            #261e45 0%,
+            #151020 75%,
+            #0c0914 100%
+        );
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 h1 {
@@ -7,12 +27,14 @@ h1 {
     font-size: 75px;
     -webkit-text-stroke: 1px white;
     text-align: center;
+    margin-bottom: 0px;
 }
 
 #race-results {
-    font-family: 'Titan One';
+    font-family: 'Noto Sans JP';
+    color: white;
+    text-align: center;
     font-size: 40px;
-    -webkit-text-stroke: 1px white;
 }
 
 .race-track{
@@ -21,7 +43,7 @@ h1 {
     border-radius: 20px 100px 100px 20px;
     position: relative;
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .ticket-container {
@@ -34,8 +56,9 @@ h1 {
 }
 
 .tickets {
+    font-family: 'Noto Sans JP';
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     z-index: 40;
 }
 
