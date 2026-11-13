@@ -34,6 +34,7 @@ function createRaceLanes() {
         const avatar = lane.querySelector(".racer-avatar");
         const progressBar = lane.querySelector(".race-progress");
         const track = lane.querySelector(".race-track");
+        const racerElement = lane.querySelector(".racer");
 
         name.textContent = racer.name;
         tickets.textContent = "0 tickets closed";
@@ -41,14 +42,14 @@ function createRaceLanes() {
         avatar.src = racer.image;
         avatar.alt = racer.name;
 
-        // Store references to this racer's elements
         racer.elements = {
             lane,
             name,
             tickets,
             avatar,
             progressBar,
-            track
+            track,
+            racerElement
         };
 
         container.appendChild(lane);
@@ -67,12 +68,16 @@ function setupRace() {
             : 0;
 
         racer.elements.tickets.textContent = "0 tickets closed";
+
+        // Stop any previous winner animation
+        racer.elements.racerElement.classList.remove("winner");
     });
 
     raceProgress = 0;
     updateRacerPositions();
 
-    document.getElementById("race-results").textContent = "Calculating results...";
+    document.getElementById("race-results").textContent =
+        "Calculating results...";
 }
 
 // Easing function for smooth movement
@@ -92,7 +97,7 @@ function updateRacerPositions() {
 
         const position = maxDistance * racer.progress * raceProgress;
 
-        // Retains your existing 30px adjustment
+        // Retains your existing 30px adjustment and 115px minimum
         progressBar.style.width =
             `${Math.max(115, position + avatar.offsetWidth - 30)}px`;
     });
@@ -164,6 +169,9 @@ function showResults() {
         return;
     }
 
+    // Start the winner's rotation animation
+    leader.elements.racerElement.classList.add("winner");
+
     if (racers.length === 1) {
         results.textContent = `${leader.name} is racing solo!`;
         return;
@@ -198,6 +206,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         createRaceLanes();
         startRace();
+
+        const replayButton = document.getElementById("replay-button");
+
+        if (replayButton) {
+            replayButton.addEventListener("click", startRace);
+        }
 
         window.addEventListener("resize", updateRacerPositions);
 
