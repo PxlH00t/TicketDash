@@ -68,13 +68,14 @@ h1 {
 
 .race-progress {
     background: linear-gradient(
-        145deg,
-        #9e9aec 0%,
-        #7773C6 20%,
-        #504486 45%,
-        #8e4d64 75%,
+        115deg,
+        black 0%,
+        #100D1B 5%,
+        #7773C6 50%,
+        #8e4d64 90%,
         #D77798 100%
     );
+    
     padding: 5px;
     border-radius: 15px 100px 100px 15px;
     display: flex;
