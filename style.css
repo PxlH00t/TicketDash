@@ -24,11 +24,13 @@ body {
 }
 
 h1 {
-    font-family: 'Titan One';
-    font-size: 75px;
+    font-family: 'Ultra';
+    color: #100D1B;
+    font-size: 60px;
     -webkit-text-stroke: 1px white;
     text-align: center;
     margin-bottom: 0px;
+    
 }
 
 h2 {
