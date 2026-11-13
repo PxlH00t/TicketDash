@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Dash</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1><i>TICKET DASH</i></h1>
+    <h2 id="race-results">Calculating results...</h2>
+    <div id="race-container"></div>
+
+    <template id="race-template">
+        <div class="race-lane">
+            <div class="race-track">
+                <div class="race-progress">
+                    <div class="racer">
+                        <img class="racer-avatar" alt="">
+                        <i><span class="name"></span></i>
+                    </div>
+                </div>
+                <div class="ticket-container">
+                    <i><span class="tickets"></span></i>
+                </div>
+            </div>
+        </div>
+    </template>
+</body>
+</html>

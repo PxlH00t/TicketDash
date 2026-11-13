@@ -1,0 +1,19 @@
+{
+  "racers": [
+    {
+      "name": "Peter",
+      "tickets": 1285,
+      "image": "./imgs/peter.jpg"
+    },
+    {
+      "name": "Tripp",
+      "tickets": 1140,
+      "image": "./imgs/tripp.jpg"
+    },
+    {
+        "name": "Adam",
+        "tickets": 737,
+        "image": "./imgs/adam.jpg"
+    }
+  ]
+}

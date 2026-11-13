@@ -1,0 +1,80 @@
+body {
+    background-color: #3b2f6b;
+}
+
+h1 {
+    font-family: 'Titan One';
+    font-size: 75px;
+    -webkit-text-stroke: 1px white;
+    text-align: center;
+}
+
+#race-results {
+    font-family: 'Titan One';
+    font-size: 40px;
+    -webkit-text-stroke: 1px white;
+}
+
+.race-track{
+    background-color: black;
+    padding: 10px;
+    border-radius: 25px 100px 100px 25px;
+    position: relative;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.ticket-container {
+    position: absolute;
+    background-color: black;
+    padding: 5px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    border-radius: 0px 0px 10px 0px;
+}
+
+.tickets {
+    color: white;
+    font-size: 30px;
+    z-index: 40;
+}
+
+.race-progress {
+    background: linear-gradient(
+        145deg,
+        #9e9aec 0%,
+        #7773C6 20%,
+        #504486 45%,
+        #8e4d64 75%,
+        #D77798 100%
+    );
+    padding: 5px;
+    border-radius: 25px 100px 100px 25px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.racer-avatar {
+    height: 100px;
+    transform: translateX(0px);
+    border-radius: 100px;
+    border: solid white 3px;
+}
+
+
+.racer {
+    position: relative;
+}
+
+.name {
+    font-family: 'Titan One';
+    font-size: 35px;
+    -webkit-text-stroke: 2px white;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    white-space: nowrap;
+    z-index: 10;
+    transform: translate(-50%);
+}
