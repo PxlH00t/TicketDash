@@ -18,7 +18,7 @@ h1 {
 .race-track{
     background-color: black;
     padding: 10px;
-    border-radius: 25px 100px 100px 25px;
+    border-radius: 20px 100px 100px 20px;
     position: relative;
     display: flex;
     margin-bottom: 10px;
@@ -77,4 +77,18 @@ h1 {
     white-space: nowrap;
     z-index: 10;
     transform: translate(-50%);
+}
+
+@media (max-width: 768px) {
+    .ticket-container {
+        top: 93%;
+        left: 0px;
+        padding-top: 15px;
+        padding-left: 15px;
+        border-radius: 0px 00px 10px 10px;
+    }
+
+    .race-track {
+        margin-bottom: 60px;
+    }
 }
