@@ -94,8 +94,8 @@ body {
         ),
         linear-gradient(
             to bottom,
-            var(--color-purple-dark) 0%,
-            var(--color-surface) 75%,
+            var(--color-black) 0%,
+            var(--color-purple-dark) 90%,
             var(--color-dark) 100%
         );
 
