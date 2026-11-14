@@ -1,5 +1,39 @@
 
 /* ========================================
+   VARIABLES
+======================================== */
+
+:root {
+    /* Backgrounds */
+    --color-dark: #100D1B;
+    --color-surface: #181429;
+    --color-purple-dark: #261E45;
+
+    /* Accent Colors */
+    --color-purple: #7773C6;
+    --color-lavender: #AD6DDD;
+    --color-pink: #D46BAE;
+    --color-coral: #E87889;
+    --color-peach: #FFB86C;
+
+    /* Winner */
+    --color-gold: #FFD700;
+
+    /* Neutrals */
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+
+    /* Shadows */
+    --color-shadow: #54396A;
+
+    /* Fonts */
+    --font-heading: 'Ultra';
+    --font-body: 'Noto Sans JP';
+    --font-racer: 'Titan One';
+}
+
+
+/* ========================================
    GLOBAL STYLES
 ======================================== */
 
@@ -8,19 +42,19 @@ body {
     background:
         radial-gradient(
             ellipse at 0% 100%,
-            #7773C6 0%,
+            var(--color-purple) 0%,
             transparent 50%
         ),
         radial-gradient(
             ellipse at 100% 150%,
-            #E87889 0%,
+            var(--color-coral) 0%,
             transparent 50%
         ),
         linear-gradient(
             to bottom,
-            #261e45 0%,
-            #151020 75%,
-            #0c0914 100%
+            var(--color-purple-dark) 0%,
+            var(--color-surface) 75%,
+            var(--color-dark) 100%
         );
 
     background-repeat: no-repeat;
@@ -33,18 +67,18 @@ body {
 ======================================== */
 
 h1 {
-    font-family: 'Ultra';
-    color: #100D1B;
+    font-family: var(--font-heading);
+    color: var(--color-dark);
     font-size: 60px;
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 1px var(--color-white);
     text-align: center;
     margin-bottom: 0px;
     margin-top: 0;
 }
 
 h2 {
-    font-family: 'Noto Sans JP';
-    color: white;
+    font-family: var(--font-body);
+    color: var(--color-white);
     text-align: center;
     font-size: 30px;
     margin: 0px;
@@ -61,10 +95,10 @@ h2 {
     font-size: 60px;
     background: linear-gradient(
         90deg,
-        #AD6DDD 0%,
-        #D46BAE 45%,
-        #F47C9A 75%,
-        #FFB86C 100%
+        var(--color-lavender) 0%,
+        var(--color-pink) 45%,
+        var(--color-coral) 75%,
+        var(--color-peach) 100%
     );
     background-clip: text;
     -webkit-background-clip: text;
@@ -91,8 +125,8 @@ h2 {
 
 .race-track {
     background: linear-gradient(
-        black 0%,
-        #100D1B 100%
+        var(--color-black) 0%,
+        var(--color-dark) 100%
     );
     padding: 10px;
     border-radius: 20px 100px 100px 20px;
@@ -105,11 +139,11 @@ h2 {
 .race-progress {
     background: linear-gradient(
         115deg,
-        black 0%,
-        #100D1B 5%,
-        #7773C6 50%,
-        #8e4d64 90%,
-        #D77798 100%
+        var(--color-black) 0%,
+        var(--color-dark) 5%,
+        var(--color-purple) 50%,
+        var(--color-coral) 90%,
+        var(--color-pink) 100%
     );
 
     padding: 5px;
@@ -128,7 +162,7 @@ h2 {
 
 .ticket-container {
     position: absolute;
-    background-color: black;
+    background-color: var(--color-black);
     padding-left: 5px;
     padding-top: 0px;
     padding-right: 20px;
@@ -140,8 +174,8 @@ h2 {
 }
 
 .tickets {
-    font-family: 'Noto Sans JP';
-    color: white;
+    font-family: var(--font-body);
+    color: var(--color-white);
     font-size: 25px;
     z-index: 40;
 }
@@ -158,16 +192,16 @@ h2 {
 .racer-avatar {
     height: 100px;
     border-radius: 100px;
-    border: solid white 3px;
+    border: solid var(--color-white) 3px;
     padding: 0px;
     margin-top: 3px;
     margin-right: 5px;
 }
 
 .name {
-    font-family: 'Titan One';
+    font-family: var(--font-racer);
     font-size: 35px;
-    -webkit-text-stroke: 2px white;
+    -webkit-text-stroke: 2px var(--color-white);
     white-space: nowrap;
     z-index: 10;
 }
@@ -197,12 +231,12 @@ h2 {
 
 .winner .racer-avatar {
     animation: winnerAvatarGrow 0.5s ease-out forwards;
-    border: 5px solid gold;
-    box-shadow: 0 0 20px gold;
+    border: 5px solid var(--color-gold);
+    box-shadow: 0 0 20px var(--color-gold);
 }
 
 .winner .name {
-    -webkit-text-stroke: 2px gold;
+    -webkit-text-stroke: 2px var(--color-gold);
 }
 
 .track-winner .race-progress {
@@ -268,11 +302,11 @@ h2 {
         padding-top: 10px;
         padding-left: 15px;
         border-radius: 0px 00px 10px 10px;
-        background-color: #100D1B;
+        background-color: var(--color-dark);
         background: linear-gradient(
-            #100D1B 0%,
-            #100D1B 50%,
-            #181429 100%
+            var(--color-dark) 0%,
+            var(--color-dark) 50%,
+            var(--color-surface) 100%
         );
         z-index: 1;
         width: 200px;
@@ -296,8 +330,8 @@ h2 {
 
     .winner .racer-avatar {
         animation: winnerAvatarGrow 0.5s ease-out forwards;
-        border: 4px solid gold;
-        box-shadow: 0 0 20px gold;
+        border: 4px solid var(--color-gold);
+        box-shadow: 0 0 20px var(--color-gold);
     }
 
     .track-winner .race-progress {
