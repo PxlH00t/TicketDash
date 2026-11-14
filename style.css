@@ -176,17 +176,23 @@ h2 {
 
 @media (max-width: 768px) {
     .ticket-container {
-        top: 95%;
+        top: 92%;
         left: 0px;
-        padding-top: 15px;
+        padding-top: 10px;
         padding-left: 15px;
         border-radius: 0px 00px 10px 10px;
         background-color: #100D1B;
         background: linear-gradient(
             #100D1B 0%,
+            #100D1B 50%,
             #181429 100%
         );
         z-index: 1;
+        width: 200px;
+    }
+
+    .tickets {
+        font-size: 20px;
     }
 
     .race-track {
