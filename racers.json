@@ -7,12 +7,12 @@
     },
     {
       "name": "Tripp",
-      "tickets": 1144,
+      "tickets": 1148,
       "image": "./imgs/tripp.jpg"
     },
     {
         "name": "Adam",
-        "tickets": 737,
+        "tickets": 738,
         "image": "./imgs/adam.jpg"
     }
   ]
