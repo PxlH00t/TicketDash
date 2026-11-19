@@ -2,17 +2,17 @@
   "racers": [
     {
       "name": "Peter",
-      "tickets": 1290,
+      "tickets": 1302,
       "image": "./imgs/peter.jpg"
     },
     {
       "name": "Tripp",
-      "tickets": 1150,
+      "tickets": 1156,
       "image": "./imgs/tripp.jpg"
     },
     {
         "name": "Adam",
-        "tickets": 738,
+        "tickets": 750,
         "image": "./imgs/adam.jpg"
     }
   ]
